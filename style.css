@@ -1,0 +1,251 @@
+*{
+    padding: 0px;
+    margin: 10px; 
+          
+}
+#main{
+  padding: 0%;
+  margin: 0%;
+ display: none;
+}
+
+.pic img{
+  height:120px;
+  width: 120px;
+  padding-left: 270px;
+  margin:10px;
+}
+.input {
+  padding-left: 150px;
+}
+  #enter{
+height: 30px; 
+width: 400px; 
+border-radius: 12px;
+padding: 2px; 
+
+}
+ #log{
+  border: 1px solid black; 
+  height: 35px;
+  width: 80px;
+  border-radius: 12px;
+  background-color: rgb(192, 192, 238);
+  cursor: pointer;
+}
+#log:hover{
+background-color: aqua;
+}
+.rule{
+  
+  padding-bottom: 10px;
+  border-bottom: 1px solid grey;
+}
+.select{
+  padding-left: 100px;
+  margin-bottom: 20px;
+}
+#log1{
+display:inline-block;
+text-align: center;
+padding-top: 10px;
+color: black;
+  width: 200px;
+  height: 30px;
+  border: 2px solid blue;
+  border-radius: 100px;
+  background-color: rgb(178, 226, 241);
+}
+#log2{
+ margin-left: 150px;
+ display:inline-block;
+ text-align: center;
+ padding-top: 10px;
+ color: black;
+   width: 200px;
+   height: 30px;
+   border: 2px solid blue;
+   border-radius: 100px;
+   background-color: rgb(178, 226, 241);
+}
+#log3{
+  display:inline-block;
+text-align: center;
+padding-top: 10px;
+color: black;
+  width: 200px;
+  height: 30px;
+  border: 2px solid blue;
+  border-radius: 100px;
+  background-color: rgb(178, 226, 241);
+}
+#log4{
+  margin-left: 150px;
+  display:inline-block;
+text-align: center;
+padding-top: 10px;
+color: black;
+  width: 200px;
+  height: 30px;
+  border: 2px solid blue;
+  border-radius: 100px;
+  background-color: rgb(178, 226, 241);
+}
+#log1:hover{
+ cursor: pointer;
+ background-color:lightyellow;
+}
+#log2:hover{
+  cursor: pointer;
+  background-color:lightyellow;
+ }
+ #log3:hover{
+  cursor: pointer;
+  background-color:lightyellow;
+ }
+ #log4:hover{
+  cursor: pointer;
+  background-color:lightyellow;
+ }
+
+ /* question page css starts*/
+ 
+#questionScreen{
+  background-color:white;
+  border-radius: 10px;
+min-height: 500px;
+width: 650px;
+padding: 10px;
+display: block;
+
+}
+.title{
+  text-align: center;
+}
+.header{
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+ #scorebox{
+  border-radius: 100px;
+  padding: 10px 15px;
+  border: 1px solid black;
+}
+#timerbox {
+  border-radius: 100px;
+  padding: 5px 10px;
+  border: 1px solid black; 
+  display: flex;
+}
+.quesbox{
+border: 2px solid grey;
+height: 100px;
+width: 600px;
+border-radius: 20px;
+padding: 5px;
+background-color: lightgoldenrodyellow;
+}
+.quesbox #quesText{
+ font-size:20px;
+}
+.quesbox #quesNo{
+  font-size: 20px;
+}
+#optionbox{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 30px 0;
+  grid-gap:15px;
+  
+}
+#optionbox span{
+  background-color:white ;
+  border-radius: 10px;
+  color:black;
+  border: 2px solid lightblue;
+ padding: 15px 15px;
+  height: 10px;
+}
+#optionbox span:hover{
+  background-color: rgb(115, 185, 187);
+  cursor: pointer;
+}
+#optionbox .active{
+  background-color: rgb(53, 223, 53);
+}
+#optionbox .disabled{
+pointer-events: none;
+}
+
+.footer{
+  padding-left: 220px;
+}
+.footer button{
+  border: 2px solid lightblue;
+  height: 40px;
+  width: 150px;
+  border-radius: 40px;
+  background-color: rgb(232, 221, 243);
+  
+}
+.footer button:hover{
+  background-color: rgb(136, 243, 238);
+  cursor: pointer;
+}
+ /* question page css ends*/
+
+ #resultScreen{
+  background-color:white;
+  border-radius: 10px;
+min-height: 500px;
+width: 650px;
+padding: 10px;
+display: none;
+ }
+.resultBox{
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap:15px;
+  font-size: 20px;
+}
+.resultBox *:nth-child(odd){
+  text-align: right;
+}
+.resultBox span{
+  font-weight: 600;
+}
+.footerOption{
+  display: flex;
+justify-content: space-between;
+}
+.footerOption button{
+  border:2px solid lightblue;
+ border-radius: 20px;
+ height: 50px;
+ width: 150px;
+ background-color: rgb(240, 180, 240);
+ text-decoration: underline;
+ margin-left: 80px;
+
+}
+.footerOption button:hover{
+  background-color: rgb(213, 229, 243);
+  cursor: pointer;
+}
+.footerOption a{
+  border:2px solid lightblue;
+  border-radius: 20px;
+  height: 40px;
+  width: 150px;
+  background-color: rgb(240, 180, 240); 
+  text-align: center;
+ margin-right: 80px;
+ padding-top: 5px;
+ color: black;
+}
+.footerOption a:hover{
+  background-color: rgb(213, 229, 243);
+  cursor: pointer; 
+}

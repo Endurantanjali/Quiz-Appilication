@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <style>
+        body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+    </style>
+</head>
+<body>
+    <div id="main">
+ <div class="pic">
+<img src="TB logo.png"></img>
+ </div>
+
+ <h2 style="text-align:center; color: rgb(31, 148, 187);">Hello User!</h2> 
+ <h4 style="text-align:center;">Enter your name to continue the Quiz</h4>
+
+ <div class="input">
+
+    <input type="text" placeholder="ENTER YOUR NAME" id="enter"></input>
+    <input type="button" id="log" value="Enter">
+ 
+</div>
+
+<div class="rule">
+    <h4 style="text-align:center;">You will have 10 seconds to answer each questions.</h4>
+</div>
+
+
+<h2 style="text-align:center; color:rgb(102, 102, 247)">Select Category</h2>
+
+<div class="select">
+<a  id="log1" >Pipes and Cisterns</a>
+<a  id="log2">Probability</a>
+<br>
+<a  id="log3">Problem on Ages</a>
+<a  id="log4">Profit and Loss</a>
+
+</div>
+</div>
+
+<body style="background-color:rgb(144, 177, 240);" >
+  
+    <div class="container" id="questionScreen">
+  
+     <div class="title">
+      <h2>Pipes and Cisterns</h2>
+     </div>
+  
+     <div class="header">
+  
+      <div id="scorebox"><h5>SCORE:0</h5></div>
+      <div id="timerbox">
+        <h5>Time Left:</h5>
+        <h5 id="time"></h5>
+     </div>
+    </div>
+  <div class="quesbox">
+    <span id="quesNo">1.</span>
+    <span id="quesText"></span>
+  </div>
+  
+  <div id="optionbox" class="active" class="disabled">
+      <span class="choice_que" id="option1"></span>
+      <span class="choice_que" id="option2"></span>
+      <span class="choice_que" id="option3"></span>
+      <span class="choice_que" id="option4"></span>
+  </div>
+  
+  <div class="footer">
+    <button id="nextQues">Next Question</button>
+  </div>
+   </div>
+  
+   
+   <div class="container" id="resultScreen"  style="display:none;">
+    <div class="title">
+     <h2>Quiz Result</h2></div>
+     <div class="resultBox">
+   
+       <label>Questions :</label>
+       <span id="totalQuestion">10</span>
+       <label>Attempt :</label>
+       <span id="attemptQuestion">01</span>
+       <label>Correct :</label>
+       <span id="correctAnswers">01</span>
+       <label>Wrong :</label>
+       <span id="wrongAnswers">01</span>
+     </div>
+  
+     <div class="footerOption">
+      <button>Start again</button>
+      <a href="index.html">Go To Home</a>
+     </div>
+    </div>
+    
+  
+<script src="pipes.js"></script>
+</body>
+</html>
