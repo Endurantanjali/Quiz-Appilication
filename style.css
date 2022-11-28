@@ -3,10 +3,12 @@
     margin: 10px; 
           
 }
+/* main page starts*/
 #main{
   padding: 0%;
   margin: 0%;
- display: none;
+display: block;
+ background-color: white;
 }
 
 .pic img{
@@ -107,7 +109,7 @@ color: black;
   cursor: pointer;
   background-color:lightyellow;
  }
-
+/* main page ends*/
  /* question page css starts*/
  
 #questionScreen{
@@ -116,8 +118,32 @@ color: black;
 min-height: 500px;
 width: 650px;
 padding: 10px;
-display: block;
+display: none;
 
+}
+#questionScreen1{
+  background-color:white;
+  border-radius: 10px;
+min-height: 500px;
+width: 650px;
+padding: 10px;
+display: none; 
+}
+#questionScreen2{
+  background-color:white;
+  border-radius: 10px;
+min-height: 500px;
+width: 650px;
+padding: 10px;
+display: none; 
+}
+#questionScreen3{
+  background-color:white;
+  border-radius: 10px;
+min-height: 500px;
+width: 650px;
+padding: 10px;
+display: none; 
 }
 .title{
   text-align: center;
@@ -132,7 +158,40 @@ display: block;
   padding: 10px 15px;
   border: 1px solid black;
 }
+#scorebox1{
+  border-radius: 100px;
+  padding: 10px 15px;
+  border: 1px solid black; 
+}
+#scorebox2{
+  border-radius: 100px;
+  padding: 10px 15px;
+  border: 1px solid black; 
+}
+#scorebox3{
+  border-radius: 100px;
+  padding: 10px 15px;
+  border: 1px solid black; 
+}
 #timerbox {
+  border-radius: 100px;
+  padding: 5px 10px;
+  border: 1px solid black; 
+  display: flex;
+}
+#timerbox1{
+  border-radius: 100px;
+  padding: 5px 10px;
+  border: 1px solid black; 
+  display: flex;
+}
+#timerbox2{
+  border-radius: 100px;
+  padding: 5px 10px;
+  border: 1px solid black; 
+  display: flex;
+}
+#timerbox3{
   border-radius: 100px;
   padding: 5px 10px;
   border: 1px solid black; 
@@ -146,10 +205,52 @@ border-radius: 20px;
 padding: 5px;
 background-color: lightgoldenrodyellow;
 }
+.quesbox1{
+  border: 2px solid grey;
+  height: 100px;
+  width: 600px;
+  border-radius: 20px;
+  padding: 5px;
+  background-color: lightgoldenrodyellow; 
+}
+.quesbox2{
+  border: 2px solid grey;
+  height: 100px;
+  width: 600px;
+  border-radius: 20px;
+  padding: 5px;
+  background-color: lightgoldenrodyellow; 
+}
+.quesbox3{
+  border: 2px solid grey;
+  height: 100px;
+  width: 600px;
+  border-radius: 20px;
+  padding: 5px;
+  background-color: lightgoldenrodyellow; 
+}
 .quesbox #quesText{
  font-size:20px;
 }
+.quesbox1 #quesText1{
+  font-size:20px;
+}
+.quesbox2 #quesText1{
+  font-size:20px;
+}
+.quesbox3 #quesText1{
+  font-size:20px;
+}
 .quesbox #quesNo{
+  font-size: 20px;
+}
+.quesbox1 #quesNo1{
+  font-size: 20px;
+}
+.quesbox2 #quesNo1{
+  font-size: 20px;
+}
+.quesbox3 #quesNo1{
   font-size: 20px;
 }
 #optionbox{
@@ -159,7 +260,51 @@ background-color: lightgoldenrodyellow;
   grid-gap:15px;
   
 }
+#optionbox1{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 30px 0;
+  grid-gap:15px; 
+}
+#optionbox2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 30px 0;
+  grid-gap:15px; 
+}
+#optionbox3{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 30px 0;
+  grid-gap:15px; 
+}
+
+
 #optionbox span{
+  background-color:white ;
+  border-radius: 10px;
+  color:black;
+  border: 2px solid lightblue;
+ padding: 15px 15px;
+  height: 10px;
+}
+#optionbox1 span{
+  background-color:white ;
+  border-radius: 10px;
+  color:black;
+  border: 2px solid lightblue;
+ padding: 15px 15px;
+  height: 10px;
+}
+#optionbox2 span{
+  background-color:white ;
+  border-radius: 10px;
+  color:black;
+  border: 2px solid lightblue;
+ padding: 15px 15px;
+  height: 10px;
+}
+#optionbox3 span{
   background-color:white ;
   border-radius: 10px;
   color:black;
@@ -171,13 +316,55 @@ background-color: lightgoldenrodyellow;
   background-color: rgb(115, 185, 187);
   cursor: pointer;
 }
+#optionbox1 span:hover{
+  background-color: rgb(115, 185, 187);
+  cursor: pointer;
+}
+#optionbox2 span:hover{
+  background-color: rgb(115, 185, 187);
+  cursor: pointer;
+}
+#optionbox3 span:hover{
+  background-color: rgb(115, 185, 187);
+  cursor: pointer;
+}
 #optionbox .active{
-  background-color: rgb(53, 223, 53);
+  background-color: rgb(115, 235, 115);
+}
+#optionbox .wrong{
+  background-color: rgb(235, 108, 108);
 }
 #optionbox .disabled{
 pointer-events: none;
 }
+#optionbox1 .active1{
+  background-color: rgb(115, 235, 115);
+}
+#optionbox1 .wrong1{
+  background-color: rgb(235, 108, 108);
+}
+#optionbox1 .disabled1{
+pointer-events: none;
+}
 
+#optionbox2 .active2{
+  background-color: rgb(115, 235, 115);
+}
+#optionbox2 .wrong2{
+  background-color: rgb(235, 108, 108);
+}
+#optionbox2 .disabled2{
+pointer-events: none;
+}
+#optionbox2 .active3{
+  background-color: rgb(115, 235, 115);
+}
+#optionbox2 .wrong3{
+  background-color: rgb(235, 108, 108);
+}
+#optionbox2 .disabled3{
+pointer-events: none;
+}
 .footer{
   padding-left: 220px;
 }
@@ -193,6 +380,51 @@ pointer-events: none;
   background-color: rgb(136, 243, 238);
   cursor: pointer;
 }
+.footer1{
+  padding-left: 220px;
+}
+.footer1 button{
+  border: 2px solid lightblue;
+  height: 40px;
+  width: 150px;
+  border-radius: 40px;
+  background-color: rgb(232, 221, 243);
+  
+}
+.footer1 button:hover{
+  background-color: rgb(136, 243, 238);
+  cursor: pointer;
+}
+.footer2{
+  padding-left: 220px;
+}
+.footer2 button{
+  border: 2px solid lightblue;
+  height: 40px;
+  width: 150px;
+  border-radius: 40px;
+  background-color: rgb(232, 221, 243);
+  
+}
+.footer2 button:hover{
+  background-color: rgb(136, 243, 238);
+  cursor: pointer;
+}
+.footer3{
+  padding-left: 220px;
+}
+.footer3 button{
+  border: 2px solid lightblue;
+  height: 40px;
+  width: 150px;
+  border-radius: 40px;
+  background-color: rgb(232, 221, 243);
+  
+}
+.footer3 button:hover{
+  background-color: rgb(136, 243, 238);
+  cursor: pointer;
+}
  /* question page css ends*/
 
  #resultScreen{
@@ -203,7 +435,7 @@ width: 650px;
 padding: 10px;
 display: none;
  }
-.resultBox{
+#resultBox{
   margin-bottom: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr;

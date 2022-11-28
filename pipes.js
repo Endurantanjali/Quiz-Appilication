@@ -1,4 +1,4 @@
-let quiz = [
+let quiz = [//Questions with choices and answers//
     {
     question: " Pipes A and B can fill a tank in 5 and 6 hours respectively. Pipe C can empty it in 12 hours. If all the three pipes are opened together, then the tank will be filled in:",
     
@@ -101,7 +101,7 @@ let quiz = [
     
 ];
 
-//For timer//
+//Getting all ID element from HTML to Javascript//
 let time = document.querySelector("#time");
 let quesNo = document.querySelector("#quesNo");
 let quesText = document.querySelector("#quesText");
@@ -116,18 +116,29 @@ let nextQues = document.querySelector("#nextQues");
 let choice_que = document.querySelectorAll(".choice_que");
 let pipeBtn = document.querySelector("#log1");
 let ques = document.querySelector("#questionScreen");
-let score = document.querySelector("#scorebox");
+let quesp = document.querySelector("#questionScreen1");
+let score = document.querySelector("#marks");
+let scorebox = document.querySelector("#scorebox");
 let result = document.querySelector("#resultScreen");
+let attemptQuestion = document.querySelector("#attemptQuestion");
+let correctAnswers = document.querySelector("#correctAnswers");
+let wrongAnswers = document.querySelector("#wrongAnswers");
 let main = document.querySelector("#main");
+let startAgain = document.querySelector("#startagain");
+let home = document.querySelector("#home");
 
 
 let index = 0;
 let timer = 0;
 let interval = 0;
 let correct = 0;
+let attempt = 0;
+let wrong = 0;
 
+
+//Fot Timer//
 let countDown = ()=>{
-    if(timer == 20){
+    if(timer === 20){
         clearInterval(interval);
         nextQues.click();
     }
@@ -136,8 +147,9 @@ let countDown = ()=>{
         time.innerText = timer;
     }
 }
-setInterval(countDown,1500);
+interval = setInterval(countDown,1000);
 
+//For loading Questions//
 let loadData = ()=>{
     quesNo.innerText = index + 1 + "." ;
     quesText.innerText = quiz[index].question;
@@ -146,32 +158,78 @@ let loadData = ()=>{
     option3.innerText = quiz[index].choice3;
     option4.innerText = quiz[index].choice4;
 
-     timer = 0;
+    timer = 0;
 }
 loadData();
 
-pipeBtn.addEventListener("click", ()=>{
-  ques.style.display = "block";
-  result.style.display = "none";
-  main.style.display = "none";
 
-  interval = setInterval(countDown, 1500);
-  loadData();
-  choice_que.forEach(removeActive =>{
-    removeActive.classList.remove("active");
-  });
-});
-
+//What happens when choice button is clicked//
 choice_que.forEach((choices,choiceNo) =>{
     choices.addEventListener("click" , ()=>{
         choices.classList.add("active");
-
-      
-
-        for(i = 0; i <=3; i++){
-            choice_que[i].classList.add("disabled");
+        if(choiceNo === quiz[index].answer){
+             correct++;
+             correctAnswers.innerHTML = correct++; 
+               
+        }
+        else{
+            wrong++;
+                 
         }
         clearInterval(interval);
-    });
+
+        for(i = 0; i<= 3; i++){
+            choice_que[i].classList.add("disabled");
+        }
+    })
 });
+
+//What happens when pipe and cisterns button is clicked//
+pipeBtn.addEventListener("click", ()=>{
+    ques.style.display = "block";
+    quesp.style.display = "none";
+   result.style.display = "none";
+   main.style.display = "none";
+  
+   interval = setInterval(countDown, 1000);
+   loadData();
+   choice_que.forEach(removeActive =>{
+      removeActive.classList.remove("active");
+  
+   })
+  });
+
+//What happens when next question button is clicked//
+nextQues.addEventListener("click" ,()=>{
+    if(index !== quiz.length - 1){
+        index++;
+        choice_que.forEach(removeActive =>{
+            removeActive.classList.remove("active");
+        })
+        loadData();
+        clearInterval(interval);
+        interval = setInterval(countDown, 1000);
+    }
+      else{
+        index = 0;
+        clearInterval(interval);
+        ques.style.display = "none";
+        result.style.display = "block";
+      } 
+      for(i = 0; i<=3; i++){
+        choice_que[i].classList.remove("disabled");
+      }
+});
+    
+//What happens when start again button is clicked//
+startAgain.addEventListener("click" , () =>{
+    ques.style.display = "block";
+    result.style.display = "none";
+});
+//What happens when home button is clicked//
+home.addEventListener("click" , () =>{
+    main.style.display = "block";
+    result.style.display = "none";
+});
+
 

@@ -16,7 +16,9 @@
     </style>
 </head>
 <body>
+  <div id="container">
     <div id="main">
+      <!--Main page starts-->
  <div class="pic">
 <img src="TB logo.png"></img>
  </div>
@@ -47,10 +49,11 @@
 
 </div>
 </div>
-
+<!--Main page ends-->
+<!--Question page starts-->
 <body style="background-color:rgb(144, 177, 240);" >
   
-    <div class="container" id="questionScreen">
+    <div  id="questionScreen">
   
      <div class="title">
       <h2>Pipes and Cisterns</h2>
@@ -58,7 +61,7 @@
   
      <div class="header">
   
-      <div id="scorebox"><h5>SCORE:0</h5></div>
+      <div id="scorebox"><h5 id="marks">SCORE:</h5></div>
       <div id="timerbox">
         <h5>Time Left:</h5>
         <h5 id="time"></h5>
@@ -70,22 +73,120 @@
   </div>
   
   <div id="optionbox" class="active" class="disabled">
-      <span class="choice_que" id="option1"></span>
-      <span class="choice_que" id="option2"></span>
-      <span class="choice_que" id="option3"></span>
-      <span class="choice_que" id="option4"></span>
+      <span onclick="checkAnwer(this)" class="choice_que" id="option1"></span>
+      <span onclick="checkAnwer(this)" class="choice_que" id="option2"></span>
+      <span onclick="checkAnwer(this)" class="choice_que" id="option3"></span>
+      <span onclick="checkAnwer(this)" class="choice_que" id="option4"></span>
   </div>
   
   <div class="footer">
     <button id="nextQues">Next Question</button>
   </div>
    </div>
+
+   <body style="background-color:rgb(144, 177, 240);" >
   
-   
-   <div class="container" id="resultScreen"  style="display:none;">
+    <div class="container" id="questionScreen1">
+  
+     <div class="title">
+      <h2>Profit and loss</h2>
+     </div>
+  
+     <div class="header">
+  
+      <div id="scorebox1"><h5 id="score1">SCORE:1</h5></div>
+      <div id="timerbox1">
+        <h5>Time Left:</h5>
+        <h5 id="time1"></h5>
+     </div>
+    </div>
+  <div class="quesbox1">
+    <span id="quesNo1">1.</span>
+    <span id="quesText1"></span>
+  </div>
+  
+  <div id="optionbox1">
+      <span class="choice_que1" id="optiona"></span>
+      <span class="choice_que1" id="optionb"></span>
+      <span class="choice_que1" id="optionc"></span>
+      <span class="choice_que1" id="optiond"></span>
+  </div>
+  
+  <div class="footer1">
+    <button id="nextQues1">Next Question</button>
+  </div>
+   </div>
+
+   <body style="background-color:rgb(144, 177, 240);" >
+  
+    <div id="questionScreen2">
+  
+     <div class="title">
+      <h2>Probability</h2>
+     </div>
+  
+     <div class="header">
+  
+      <div id="scorebox2"><h5 id="score2">SCORE:1</h5></div>
+      <div id="timerbox2">
+        <h5>Time Left:</h5>
+        <h5 id="time2"></h5>
+     </div>
+    </div>
+  <div class="quesbox2">
+    <span id="quesNo2">1.</span>
+    <span id="quesText2"></span>
+  </div>
+  
+  <div id="optionbox2">
+      <span class="choice_que2" id="optione"></span>
+      <span class="choice_que2" id="optionf"></span>
+      <span class="choice_que2" id="optiong"></span>
+      <span class="choice_que2" id="optionh"></span>
+  </div>
+  
+  <div class="footer2">
+    <button id="nextQues2">Next Question</button>
+  </div>
+   </div>
+
+   <div  id="questionScreen3">
+  
+    <div class="title">
+     <h2>Problems on Ages</h2>
+    </div>
+ 
+    <div class="header">
+ 
+     <div id="scorebox3"><h5 id="score3">SCORE:1</h5></div>
+     <div id="timerbox3">
+       <h5>Time Left:</h5>
+       <h5 id="time3"></h5>
+    </div>
+   </div>
+ <div class="quesbox3">
+   <span id="quesNo3">1.</span>
+   <span id="quesText3"></span>
+ </div>
+ 
+ <div id="optionbox3">
+     <span class="choice_que3" id="optioni"></span>
+     <span class="choice_que3" id="optionj"></span>
+     <span class="choice_que3" id="optionk"></span>
+     <span class="choice_que3" id="optionl"></span>
+ </div>
+ 
+ <div class="footer3">
+   <button id="nextQues3">Next Question</button>
+ </div>
+  </div>
+  
+   <!--Question page ends-->
+   <!--Result page starts-->
+   <div id="resultScreen" >
     <div class="title">
      <h2>Quiz Result</h2></div>
-     <div class="resultBox">
+     <div id="resultBox">
    
        <label>Questions :</label>
        <span id="totalQuestion">10</span>
@@ -98,12 +199,15 @@
      </div>
   
      <div class="footerOption">
-      <button>Start again</button>
-      <a href="index.html">Go To Home</a>
+      <button id="startagain">Start again</button>
+      <button id="home">Go To Home</button>
      </div>
     </div>
-    
-  
+    <!--Result page ends-->
+</div>
 <script src="pipes.js"></script>
+<script src="probability.js"></script>
+<script src="ages.js"></script>
+<script src="profit.js"></script>
 </body>
 </html>
