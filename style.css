@@ -1,21 +1,28 @@
 *{
-    padding: 0px;
-    margin: 10px; 
-          
+  padding: 0;
+  margin: 0;
+  font-family: 'Exo' , sans-serif;
+  box-sizing: border-box;
 }
-/* main page starts*/
-#main{
-  padding: 0%;
-  margin: 0%;
-display: block;
- background-color: white;
+body{
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color:rgb(248, 212, 220)
 }
-
-.pic img{
+#container{
+  height: auto;
+  width: auto;
+}
+.main{
+  height: auto;
+  width: auto;
+  display: block;
+}
+.main .pic img{
   height:120px;
   width: 120px;
-  padding-left: 270px;
-  margin:10px;
+margin-left: 250px;
 }
 .input {
   padding-left: 150px;
@@ -43,441 +50,234 @@ background-color: aqua;
   padding-bottom: 10px;
   border-bottom: 1px solid grey;
 }
-.select{
-  padding-left: 100px;
-  margin-bottom: 20px;
-}
-#log1{
-display:inline-block;
-text-align: center;
-padding-top: 10px;
-color: black;
-  width: 200px;
-  height: 30px;
-  border: 2px solid blue;
-  border-radius: 100px;
-  background-color: rgb(178, 226, 241);
-}
-#log2{
- margin-left: 150px;
- display:inline-block;
- text-align: center;
- padding-top: 10px;
- color: black;
-   width: 200px;
-   height: 30px;
-   border: 2px solid blue;
-   border-radius: 100px;
-   background-color: rgb(178, 226, 241);
-}
-#log3{
-  display:inline-block;
-text-align: center;
-padding-top: 10px;
-color: black;
-  width: 200px;
-  height: 30px;
-  border: 2px solid blue;
-  border-radius: 100px;
-  background-color: rgb(178, 226, 241);
-}
-#log4{
-  margin-left: 150px;
-  display:inline-block;
-text-align: center;
-padding-top: 10px;
-color: black;
-  width: 200px;
-  height: 30px;
-  border: 2px solid blue;
-  border-radius: 100px;
-  background-color: rgb(178, 226, 241);
-}
-#log1:hover{
- cursor: pointer;
- background-color:lightyellow;
-}
-#log2:hover{
-  cursor: pointer;
-  background-color:lightyellow;
- }
- #log3:hover{
-  cursor: pointer;
-  background-color:lightyellow;
- }
- #log4:hover{
-  cursor: pointer;
-  background-color:lightyellow;
- }
-/* main page ends*/
- /* question page css starts*/
- 
-#questionScreen{
-  background-color:white;
-  border-radius: 10px;
-min-height: 500px;
-width: 650px;
-padding: 10px;
-display: none;
-
-}
-#questionScreen1{
-  background-color:white;
-  border-radius: 10px;
-min-height: 500px;
-width: 650px;
-padding: 10px;
-display: none; 
-}
-#questionScreen2{
-  background-color:white;
-  border-radius: 10px;
-min-height: 500px;
-width: 650px;
-padding: 10px;
-display: none; 
-}
-#questionScreen3{
-  background-color:white;
-  border-radius: 10px;
-min-height: 500px;
-width: 650px;
-padding: 10px;
-display: none; 
-}
-.title{
+#start{
+  height: 70px;
+  width: 250px;
   text-align: center;
+  margin-top: 10px;
+  margin-left: 160px;
+  padding: 20px ;
+  background-color: rgb(218, 191, 243);
+  color: black;
+  font-size: 23px;
+  font-weight: 700;
+  border-radius: 30px 10px;
+  border: 2px solid blueviolet;
+  cursor: pointer;
 }
-.header{
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: space-between;
+#start:hover{
+background-color: rgb(205, 248, 234);
 }
- #scorebox{
-  border-radius: 100px;
-  padding: 10px 15px;
+
+#guide , #quiz{
+  height: auto;
+  width: 580px;
+  padding:20px;
+  background-color:rgb(204, 174, 233);
   border: 1px solid black;
+  display: none;
 }
-#scorebox1{
-  border-radius: 100px;
-  padding: 10px 15px;
-  border: 1px solid black; 
+#guide h2{
+  font-size: 60px;
 }
-#scorebox2{
-  border-radius: 100px;
-  padding: 10px 15px;
-  border: 1px solid black; 
-}
-#scorebox3{
-  border-radius: 100px;
-  padding: 10px 15px;
-  border: 1px solid black; 
-}
-#timerbox {
-  border-radius: 100px;
-  padding: 5px 10px;
-  border: 1px solid black; 
+#guide h4{
+  height: 50px;
+  width: 100%;
   display: flex;
-}
-#timerbox1{
-  border-radius: 100px;
-  padding: 5px 10px;
-  border: 1px solid black; 
-  display: flex;
-}
-#timerbox2{
-  border-radius: 100px;
-  padding: 5px 10px;
-  border: 1px solid black; 
-  display: flex;
-}
-#timerbox3{
-  border-radius: 100px;
-  padding: 5px 10px;
-  border: 1px solid black; 
-  display: flex;
-}
-.quesbox{
-border: 2px solid grey;
-height: 100px;
-width: 600px;
-border-radius: 20px;
-padding: 5px;
-background-color: lightgoldenrodyellow;
-}
-.quesbox1{
-  border: 2px solid grey;
-  height: 100px;
-  width: 600px;
-  border-radius: 20px;
-  padding: 5px;
-  background-color: lightgoldenrodyellow; 
-}
-.quesbox2{
-  border: 2px solid grey;
-  height: 100px;
-  width: 600px;
-  border-radius: 20px;
-  padding: 5px;
-  background-color: lightgoldenrodyellow; 
-}
-.quesbox3{
-  border: 2px solid grey;
-  height: 100px;
-  width: 600px;
-  border-radius: 20px;
-  padding: 5px;
-  background-color: lightgoldenrodyellow; 
-}
-.quesbox #quesText{
- font-size:20px;
-}
-.quesbox1 #quesText1{
-  font-size:20px;
-}
-.quesbox2 #quesText1{
-  font-size:20px;
-}
-.quesbox3 #quesText1{
-  font-size:20px;
-}
-.quesbox #quesNo{
+  align-items: center;
   font-size: 20px;
 }
-.quesbox1 #quesNo1{
-  font-size: 20px;
+#guide #button{
+height: 50px;
+width: 100%;
+display: flex;
+justify-content: flex-end;
 }
-.quesbox2 #quesNo1{
-  font-size: 20px;
+#guide #button button{
+  height: 50px;
+  width: 120px;
+  margin: 10px 25px;
+  border: none;
+  outline: none;
+  color: black;
+  background-color: rgb(226, 172, 133);
+  border:1px solid chocolate;
+  border-radius: 20px 5px;
+  font-size: 18px;
+  cursor: pointer;
 }
-.quesbox3 #quesNo1{
-  font-size: 20px;
+#guide #button button:last-child{
+  margin: 10px 0;
 }
-#optionbox{
+#guide #button button:hover{
+  background-color: rgb(247, 226, 145);
+}
+#quiz{
+  display: none;
+  height: 480px;
+  position: relative;
+}
+#quiz #quiz_header{
+  height: 60px;
+  width: 100%;
+  background-color: rgb(218, 236, 236);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 30px 0;
+}
+#quiz #quiz_header h5{
+  font-size: 28px;
+  margin: 0 20px;
+  color: rgb(247, 81, 114);
+}
+#quiz #quiz_header #timer{
+  height: 50px;
+  width: 200px;
+  background-color: rgb(245, 180, 180);
+  border: 1px solid brown;
+  font-size: 18px;
+  border-radius: 20px 5px;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 10px;
+}
+#quiz #quiz_header #timer h6{
+  font-size: 22px ;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 30px 0;
-  grid-gap:15px;
+  place-items: center;
+  margin: 0 10px;
+}
+#quiz #quiz_header #timer #time{
+  height: 44px;
+  width: 50px;
+  background-color: white;
+  color: black;
+  border: 1px solid brown;
+  border-radius: 15px 7px;
+  margin: 2px 0 0 27px;
+}
+#quiz #question{
+  position: absolute;
+  top: 90px;
+  display: flex;
+  flex-direction: row;
+}
+#quiz #question h2{
+  font-size:27px ;
+}
+#quiz #question h2:first-child{
+  margin: 0 10px 0 5px;
+}
+#quiz #optionList{
+  height:400px;
+  width: 100%;
+  position: absolute;
+  top: 160px;
+}
+#quiz #optionList h4{
+  height: 50px;
+  width: 535px;
+  background-color: white;
+  line-height: 50px;
+  margin: 5px 0;
+  border-radius: 7px;
+  padding: 0 20px;
+  color: black;
+  overflow: hidden;
+  border: 1px solid black;
+  cursor: pointer;
+
+}
+#quiz #optionList h4:hover{
+  background-color: rgb(175, 240, 218);
+}
+#quiz #optionList .active{
+  background-color: rgb(209, 243, 209);
+}
+#quiz #optionList .disabled{
+  pointer-events: none;
+}
+#quiz #answerSection{
+  height: 60px;
+  width: 100%;
+  background-color: beige;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 30px 0;
   
 }
-#optionbox1{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 30px 0;
-  grid-gap:15px; 
+
+#quiz #answerSection h3{
+  margin: 0px 30px;
+ display: none;
 }
-#optionbox2{
+#quiz #answerSection h3:last-child{
+  height: 40px;
+  width: 100px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 30px 0;
-  grid-gap:15px; 
+  place-items: center;
+  background-color: aliceblue;
+  position: absolute;
+  right: 0;
+  border: 1px solid black;
+  font-size: 18px;
+  border-radius: 20px 5px;
+  cursor: pointer;
+  margin: 0 20px;
 }
-#optionbox3{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 30px 0;
-  grid-gap:15px; 
+#quiz #answerSection h3:hover{
+  background-color:aquamarine;
+}
+#quiz #answerSection h3:first-child:hover{
+  background: none;
 }
 
 
-#optionbox span{
-  background-color:white ;
-  border-radius: 10px;
-  color:black;
-  border: 2px solid lightblue;
- padding: 15px 15px;
-  height: 10px;
-}
-#optionbox1 span{
-  background-color:white ;
-  border-radius: 10px;
-  color:black;
-  border: 2px solid lightblue;
- padding: 15px 15px;
-  height: 10px;
-}
-#optionbox2 span{
-  background-color:white ;
-  border-radius: 10px;
-  color:black;
-  border: 2px solid lightblue;
- padding: 15px 15px;
-  height: 10px;
-}
-#optionbox3 span{
-  background-color:white ;
-  border-radius: 10px;
-  color:black;
-  border: 2px solid lightblue;
- padding: 15px 15px;
-  height: 10px;
-}
-#optionbox span:hover{
-  background-color: rgb(115, 185, 187);
-  cursor: pointer;
-}
-#optionbox1 span:hover{
-  background-color: rgb(115, 185, 187);
-  cursor: pointer;
-}
-#optionbox2 span:hover{
-  background-color: rgb(115, 185, 187);
-  cursor: pointer;
-}
-#optionbox3 span:hover{
-  background-color: rgb(115, 185, 187);
-  cursor: pointer;
-}
-#optionbox .active{
-  background-color: rgb(115, 235, 115);
-}
-#optionbox .wrong{
-  background-color: rgb(235, 108, 108);
-}
-#optionbox .disabled{
-pointer-events: none;
-}
-#optionbox1 .active1{
-  background-color: rgb(115, 235, 115);
-}
-#optionbox1 .wrong1{
-  background-color: rgb(235, 108, 108);
-}
-#optionbox1 .disabled1{
-pointer-events: none;
-}
-
-#optionbox2 .active2{
-  background-color: rgb(115, 235, 115);
-}
-#optionbox2 .wrong2{
-  background-color: rgb(235, 108, 108);
-}
-#optionbox2 .disabled2{
-pointer-events: none;
-}
-#optionbox2 .active3{
-  background-color: rgb(115, 235, 115);
-}
-#optionbox2 .wrong3{
-  background-color: rgb(235, 108, 108);
-}
-#optionbox2 .disabled3{
-pointer-events: none;
-}
-.footer{
-  padding-left: 220px;
-}
-.footer button{
-  border: 2px solid lightblue;
-  height: 40px;
-  width: 150px;
-  border-radius: 40px;
-  background-color: rgb(232, 221, 243);
-  
-}
-.footer button:hover{
-  background-color: rgb(136, 243, 238);
-  cursor: pointer;
-}
-.footer1{
-  padding-left: 220px;
-}
-.footer1 button{
-  border: 2px solid lightblue;
-  height: 40px;
-  width: 150px;
-  border-radius: 40px;
-  background-color: rgb(232, 221, 243);
-  
-}
-.footer1 button:hover{
-  background-color: rgb(136, 243, 238);
-  cursor: pointer;
-}
-.footer2{
-  padding-left: 220px;
-}
-.footer2 button{
-  border: 2px solid lightblue;
-  height: 40px;
-  width: 150px;
-  border-radius: 40px;
-  background-color: rgb(232, 221, 243);
-  
-}
-.footer2 button:hover{
-  background-color: rgb(136, 243, 238);
-  cursor: pointer;
-}
-.footer3{
-  padding-left: 220px;
-}
-.footer3 button{
-  border: 2px solid lightblue;
-  height: 40px;
-  width: 150px;
-  border-radius: 40px;
-  background-color: rgb(232, 221, 243);
-  
-}
-.footer3 button:hover{
-  background-color: rgb(136, 243, 238);
-  cursor: pointer;
-}
- /* question page css ends*/
-
- #resultScreen{
+#result{
   background-color:white;
   border-radius: 10px;
 min-height: 500px;
 width: 650px;
 padding: 10px;
-display: none;
- }
-#resultBox{
-  margin-bottom: 30px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-row-gap:15px;
-  font-size: 20px;
+display:none ;
+ 
 }
-.resultBox *:nth-child(odd){
-  text-align: right;
-}
-.resultBox span{
-  font-weight: 600;
-}
-.footerOption{
-  display: flex;
-justify-content: space-between;
-}
-.footerOption button{
-  border:2px solid lightblue;
- border-radius: 20px;
- height: 50px;
- width: 150px;
- background-color: rgb(240, 180, 240);
- text-decoration: underline;
- margin-left: 80px;
 
+ .scoreCard table{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
 }
-.footerOption button:hover{
-  background-color: rgb(213, 229, 243);
+.scoreCard table td{
+  border: 1px solid black;
+  padding: 8px 15px;
+  font-weight: 500;
+  color: black;
+  width: 50%;
+  text-align: left;
+  font-size: 18px;
+}
+#result .resultEnd{
+display: flex;
+justify-content: space-around;
+}
+#result button{
+  height: 50px;
+  width: 150px;
+  background-color: rgb(228, 197, 243);
+  border-radius: 20px;
+  border: 1px solid rgb(202, 124, 241);
   cursor: pointer;
 }
-.footerOption a{
-  border:2px solid lightblue;
-  border-radius: 20px;
-  height: 40px;
-  width: 150px;
-  background-color: rgb(240, 180, 240); 
-  text-align: center;
- margin-right: 80px;
- padding-top: 5px;
- color: black;
-}
-.footerOption a:hover{
-  background-color: rgb(213, 229, 243);
-  cursor: pointer; 
+#result button:hover{
+  background-color: rgb(243, 170, 221);
 }

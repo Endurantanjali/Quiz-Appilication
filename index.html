@@ -1,213 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Application</title>
-    <style>
-        body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-}
-    </style>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Application</title>
 </head>
 <body>
+  
   <div id="container">
-    <div id="main">
-      <!--Main page starts-->
- <div class="pic">
-<img src="TB logo.png"></img>
- </div>
-
- <h2 style="text-align:center; color: rgb(31, 148, 187);">Hello User!</h2> 
- <h4 style="text-align:center;">Enter your name to continue the Quiz</h4>
-
- <div class="input">
-
-    <input type="text" placeholder="ENTER YOUR NAME" id="enter"></input>
-    <input type="button" id="log" value="Enter">
- 
-</div>
-
-<div class="rule">
-    <h4 style="text-align:center;">You will have 10 seconds to answer each questions.</h4>
-</div>
-
-
-<h2 style="text-align:center; color:rgb(102, 102, 247)">Select Category</h2>
-
-<div class="select">
-<a  id="log1" >Pipes and Cisterns</a>
-<a  id="log2">Probability</a>
-<br>
-<a  id="log3">Problem on Ages</a>
-<a  id="log4">Profit and Loss</a>
-
-</div>
-</div>
-<!--Main page ends-->
-<!--Question page starts-->
-<body style="background-color:rgb(144, 177, 240);" >
-  
-    <div  id="questionScreen">
-  
-     <div class="title">
-      <h2>Pipes and Cisterns</h2>
-     </div>
-  
-     <div class="header">
-  
-      <div id="scorebox"><h5 id="marks">SCORE:</h5></div>
-      <div id="timerbox">
-        <h5>Time Left:</h5>
-        <h5 id="time"></h5>
-     </div>
-    </div>
-  <div class="quesbox">
-    <span id="quesNo">1.</span>
-    <span id="quesText"></span>
-  </div>
-  
-  <div id="optionbox" class="active" class="disabled">
-      <span onclick="checkAnwer(this)" class="choice_que" id="option1"></span>
-      <span onclick="checkAnwer(this)" class="choice_que" id="option2"></span>
-      <span onclick="checkAnwer(this)" class="choice_que" id="option3"></span>
-      <span onclick="checkAnwer(this)" class="choice_que" id="option4"></span>
-  </div>
-  
-  <div class="footer">
-    <button id="nextQues">Next Question</button>
-  </div>
+<!--Start section-->
+<div class="main">
+<div class="pic">
+  <img src="TB logo.png"></img>
    </div>
-
-   <body style="background-color:rgb(144, 177, 240);" >
   
-    <div class="container" id="questionScreen1">
+   <h2 style="text-align:center; color: rgb(31, 148, 187);">Hello User!</h2> 
+   <h4 style="text-align:center;">Enter your name to continue the Quiz</h4>
   
-     <div class="title">
-      <h2>Profit and loss</h2>
-     </div>
+   <div class="input">
   
-     <div class="header">
-  
-      <div id="scorebox1"><h5 id="score1">SCORE:1</h5></div>
-      <div id="timerbox1">
-        <h5>Time Left:</h5>
-        <h5 id="time1"></h5>
-     </div>
-    </div>
-  <div class="quesbox1">
-    <span id="quesNo1">1.</span>
-    <span id="quesText1"></span>
-  </div>
-  
-  <div id="optionbox1">
-      <span class="choice_que1" id="optiona"></span>
-      <span class="choice_que1" id="optionb"></span>
-      <span class="choice_que1" id="optionc"></span>
-      <span class="choice_que1" id="optiond"></span>
-  </div>
-  
-  <div class="footer1">
-    <button id="nextQues1">Next Question</button>
-  </div>
-   </div>
-
-   <body style="background-color:rgb(144, 177, 240);" >
-  
-    <div id="questionScreen2">
-  
-     <div class="title">
-      <h2>Probability</h2>
-     </div>
-  
-     <div class="header">
-  
-      <div id="scorebox2"><h5 id="score2">SCORE:1</h5></div>
-      <div id="timerbox2">
-        <h5>Time Left:</h5>
-        <h5 id="time2"></h5>
-     </div>
-    </div>
-  <div class="quesbox2">
-    <span id="quesNo2">1.</span>
-    <span id="quesText2"></span>
-  </div>
-  
-  <div id="optionbox2">
-      <span class="choice_que2" id="optione"></span>
-      <span class="choice_que2" id="optionf"></span>
-      <span class="choice_que2" id="optiong"></span>
-      <span class="choice_que2" id="optionh"></span>
-  </div>
-  
-  <div class="footer2">
-    <button id="nextQues2">Next Question</button>
-  </div>
-   </div>
-
-   <div  id="questionScreen3">
-  
-    <div class="title">
-     <h2>Problems on Ages</h2>
-    </div>
- 
-    <div class="header">
- 
-     <div id="scorebox3"><h5 id="score3">SCORE:1</h5></div>
-     <div id="timerbox3">
-       <h5>Time Left:</h5>
-       <h5 id="time3"></h5>
-    </div>
-   </div>
- <div class="quesbox3">
-   <span id="quesNo3">1.</span>
-   <span id="quesText3"></span>
- </div>
- 
- <div id="optionbox3">
-     <span class="choice_que3" id="optioni"></span>
-     <span class="choice_que3" id="optionj"></span>
-     <span class="choice_que3" id="optionk"></span>
-     <span class="choice_que3" id="optionl"></span>
- </div>
- 
- <div class="footer3">
-   <button id="nextQues3">Next Question</button>
- </div>
-  </div>
-  
-   <!--Question page ends-->
-   <!--Result page starts-->
-   <div id="resultScreen" >
-    <div class="title">
-     <h2>Quiz Result</h2></div>
-     <div id="resultBox">
+      <input type="text" placeholder="ENTER YOUR NAME" id="enter"></input>
+      <input type="button" id="log" value="Enter">
    
-       <label>Questions :</label>
-       <span id="totalQuestion">10</span>
-       <label>Attempt :</label>
-       <span id="attemptQuestion">01</span>
-       <label>Correct :</label>
-       <span id="correctAnswers">01</span>
-       <label>Wrong :</label>
-       <span id="wrongAnswers">01</span>
-     </div>
+  </div>
   
-     <div class="footerOption">
-      <button id="startagain">Start again</button>
-      <button id="home">Go To Home</button>
-     </div>
-    </div>
-    <!--Result page ends-->
+  <div class="rule">
+      <h4 style="text-align:center;">You will have 10 seconds to answer each questions.</h4>
+  </div>
+
+  <div id="start">Start Quiz</div>
 </div>
-<script src="pipes.js"></script>
-<script src="probability.js"></script>
-<script src="ages.js"></script>
-<script src="profit.js"></script>
+
+<!--Guide Section-->
+
+<div id="guide">
+  <h2>Quiz Guide</h2>
+  <h4>1. You have only 60 seconds for each questions.</h4>
+  <h4>2. Once you select your answer . It can not be undone.</h4>
+  <h4>3. You'll get points on the basis of your correct answers.</h4>
+  <h4>4. You can not exit from the quiz while you are playing.</h4>
+
+  <div id="button">
+    <button id="exit">Exit</button>
+    <button id="continue">Continue</button>
+  </div>
+</div>
+
+<!--Quiz Section-->
+
+<div id="quiz">
+  <div id="quiz_header">
+    <h5>Quiz Questions</h5>
+    <div id="timer">
+      <h6>Time Left</h6>
+      <h6 id="time">00</h6>
+    </div>
+  </div>
+  <!--Questions-->
+<div id="question">
+  <h2 id="questionNo"></h2>
+  <h2 id="questionText"></h2>
+</div>
+
+<!--Multiple choice-->
+<div id="optionList">
+  <h4 class="choice_que" id="option1"></h4>
+  <h4 class="choice_que" id="option2"></h4>
+  <h4 class="choice_que" id="option3"></h4>
+  <h4 class="choice_que" id="option4"></h4>
+</div>
+
+<!--Answer Section-->
+
+<div id="answerSection">
+  <h3 id="total_Correct"></h3>
+  <h3 id="nextQuestion">Next </h3>
+</div>
+</div>
+
+<!--Result Section-->
+<div id="result">
+  <div class="head">
+    <h1 style="text-align:center"> Quiz Result</h1>
+  </div>
+  <div class="scoreCard">
+  <table>
+    <tr>
+    <td>Total Questions</td>
+    <td><span class="totalQues">10</span></td>
+   </tr>
+   <td>Attempts</td>
+    <td><span class="totalAttempt"></span></td>
+   </tr>
+   <td>Correct</td>
+    <td><span class="right"></span></td>
+   </tr>
+   <td>Wrong</td>
+    <td><span class="totalWrong"></span></td>
+   </tr>
+   <td>Percentage</td>
+    <td><span class="percentage"></span></td>
+   </tr>
+   <td>Your Total Score</td>
+    <td><span class="totalScore"></span></td>
+   </tr>
+  </table>
+</div>
+<div class="resultEnd">
+<button id="quit">Quit Quiz</button>
+<button id="startAgain">Start Again</button>
+</div>
+</div>
+
+
+
+
+
+
+
+
+  </div>
+  <script src="quiz.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
